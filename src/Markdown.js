@@ -1,5 +1,5 @@
 import ReactMarkdown from 'react-markdown';
-import {InlineMath, BlockMath} from 'react-katex';
+import {BlockMath} from 'react-katex';
 import 'katex/dist/katex.min.css';
 import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
@@ -11,7 +11,6 @@ const _mapProps = (props) => ({
     rehypePlugins: [rehypeKatex],
     components: {
         math: ({ value }) => <BlockMath>{value}</BlockMath>,
-        inlineMath: ({ value }) => <InlineMath>{value}</InlineMath>
     }
 });
 
